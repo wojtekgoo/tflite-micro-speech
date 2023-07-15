@@ -1,37 +1,41 @@
-# TensorFlow Lite Micro Library for Arduino
+### How to Install
 
-This repository has the code (including examples) needed to use Tensorflow Lite Micro on an Arduino.
+This code is specific for Nano 33 BLE Sense:
+cd My Documents\Arduino\Libraries
+git clone https://github.com/tensorflow/tflite-micro-arduino-examples Arduino_TensorFlowLite
 
-## Table of contents
-<!--ts-->
-* [Table of contents](#table-of-contents)
-* [Build Status](#build-status)
-* [How to Install](#how-to-install)
-  * [GitHub](#github)
-  * [Checking your Installation](#checking-your-installation)
-* [Compatibility](#compatibility)
-* [License](#license)
-* [Contributing](#contributing)
-<!--te-->
+To save some space:
+rmdir docs
+rmdir .git
+rmdir .github
 
-## Build Status
+xcopy examples examples.bak /e /i /h
 
-Build Type          |     Status    |
----------------     | ------------- |
-Arduino CLI on Linux  | [![Arduino](https://github.com/tensorflow/tflite-micro-arduino-examples/actions/workflows/ci.yml/badge.svg?event=schedule)](https://github.com/tensorflow/tflite-micro-arduino-examples/actions/workflows/ci.yml)
-Sync from tflite-micro  | [![Sync from tflite-micro](https://github.com/tensorflow/tflite-micro-arduino-examples/actions/workflows/sync.yml/badge.svg)](https://github.com/tensorflow/tflite-micro-arduino-examples/actions/workflows/sync.yml)
+Open project:
+File->Examples->Arduino_TensorFlowLite->micro_speech
 
-## How to Install
 
-### GitHub
+git config --global user.name "wojtekgoo"
+git config --global user.email .....@....
 
-The officially supported TensorFlow Lite Micro library for Arduino resides
-in the [tflite-micro-arduino-examples](https://github.com/tensorflow/tflite-micro-arduino-examples)
-GitHub repository.
-To install the in-development version of this library, you can use the
-latest version directly from the GitHub repository. This requires you clone the
-repo into the folder that holds libraries for the Arduino IDE. The location for
-this folder varies by operating system, but typically it's in
+Create local repo:
+git init
+git add .
+(git rm nazwa_pliku .)
+git commit -m "Initial commit"
+git status
+
+Create tflite-micro-speech repo on Github
+
+Add a remote repo:
+git remote add origin https://github.com/wojtekgoo/tflite-micro-speech
+(git remote rm origin)
+git branch -M main   (if main is default branch, but git keeps committing to master)
+git add .
+git commit -m "Initial commit"
+git push --set-upstream --force origin main
+
+Authorize with browser
 `~/Arduino/libraries` on Linux, `~/Documents/Arduino/libraries/` on MacOS, and
 `My Documents\Arduino\Libraries` on Windows.
 
@@ -67,14 +71,3 @@ like microphones, cameras, and accelerometers is specific to the `Nano 33 BLE Se
 ## License
 
 This code is made available under the Apache 2 license.
-
-## Contributing
-
-Forks of this library are welcome and encouraged. If you have bug reports or
-fixes to contribute, the source of this code is at [https:://github.com/tensorflow/tflite-micro](github.com/tensorflow/tflite-micro)
-and all issues and pull requests should be directed there.
-
-The code here is created through an automatic project generation process
-and may differ from
-that source of truth, since it's cross-platform and needs to be modified to
-work within the Arduino IDE.

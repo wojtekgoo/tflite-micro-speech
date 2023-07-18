@@ -90,10 +90,12 @@ echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib/:$CUDNN_PATH/lib
 ```
 
 ## Install TF with pip (inside conda environment)
+```
 pip install --upgrade pip
 pip install tensorflow==2.12.*
 python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
 python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+```
 
 ## Jupyterlab
 

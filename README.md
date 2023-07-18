@@ -59,7 +59,7 @@ like microphones, cameras, and accelerometers is specific to the `Nano 33 BLE Se
 
 # Tensorflow install
 
-## check versions needed
+## Check versions needed
 
 `https://www.tensorflow.org/install/source#gpu`
 
@@ -70,7 +70,7 @@ bash Miniconda3-latest-Linux-x86_64.sh
 source ~/.bashrc
 ```
 
-## conda 
+## Conda 
 ```
 conda create --name tf python=3.8
 conda activate tf
@@ -78,7 +78,7 @@ conda install -c conda-forge cudatoolkit=11.8.0
 pip install nvidia-cudnn-cu11==8.6.0.163
 ```
 
-## paths
+## Paths
 
 ```
 CUDNN_PATH=$(dirname $(python -c "import nvidia.cudnn;print(nvidia.cudnn.__file__)"))
@@ -95,7 +95,7 @@ pip install tensorflow==2.12.*
 python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
 python3 -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
 
-## jupyterlab
+## Jupyterlab
 
 ```
 pip install jupyterlab ipykernel
